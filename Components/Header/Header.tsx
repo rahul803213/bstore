@@ -8,69 +8,71 @@ import AutoStoriesIcon from '@mui/icons-material/AutoStories';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import MenuIcon from '@mui/icons-material/Menu'; // Hamburger Icon
 
+
 const Header: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false); // To toggle the mobile menu
 
   return (
-    <header className="flex justify-between items-center w-full lg:w-10/12  lg:mx-auto bg-white h-20">
+    <header className="flex justify-between items-center w-full px-3 lg:px-0 lg:w-10/12 lg:mx-auto bg-white h-20">
 
       {/* Mobile Hamburger Icon */}
-      <div className="lg:hidden flex items-center">
+      <div className=" lg:hidden flex items-center">
         <MenuIcon className="text-3xl text-black h-10" onClick={() => setMenuOpen(!menuOpen)} />
       </div>
 
       {/* Mobile Logo - Shows after Hamburger */}
-      <div className="lg:hidden flex items-center justify-center ml-2">
+      <div className=" lg:hidden flex items-center justify-center ml-2">
         <AutoStoriesIcon className="text-4xl text-black" />
       </div>
 
       {/* Search Bar on Mobile and Desktop */}
-      <div className="flex-1 lg:w-[45%] flex justify-center lg:justify-start md:hidden border-2 border-red-500">
+      <div className="flex ml-3 justify-center lg:justify-start md:hidden">
         <SearchBar />
       </div>
 
       {/* Right Side Controls (on mobile) */}
-      <div className="lg:hidden flex items-center justify-end w-[25%] space-x-4">
+      <div className=" lg:hidden flex items-center justify-end  space-x-4 ">
         {/* Cart Icon on Mobile */}
-        <ShoppingCartIcon className="text-3xl text-black" />
-      </div>
+        {/* <Image src={shoppingBag} alt="Shopping Bag" width={50} height={50} /> */}
+        <ShoppingCartIcon className="text-4xl text-black"/>
+        </div>
 
       {/* Desktop Layout */}
-      <div className="hidden lg:flex gap-4 items-center justify-between w-full">
+      <div className="hidden lg:flex gap-4 items-center  w-full ">
         {/* Desktop Logo */}
-        <div className="flex items-center space-x-4">
-          <AutoStoriesIcon className="text-3xl text-black" />
-          <p className="font-sans text-black text-md leading-tight flex flex-col">
+        <div className="flex items-center w-1/5  ">
+          <AutoStoriesIcon className="text-4xl text-black" />
+          <p className="font-sans font-bold text-teal-900 text-md leading-tight flex flex-col">
             <span>HEALTH SCIENCES</span> 
             <span>BOOKSTORE</span>
           </p>
         </div>
 
         {/* Search Bar */}
-        <div className="w-[45%] ">
+        <div className="flex items-center w-2/5 ">
           <SearchBar />
         </div>
 
         {/* Right Side Controls */}
-        <div className="flex gap-4 items-center w-[25%] justify-end">
-          <div className="flex items-center text-sm">
+        <div className="flex gap-4 items-center  justify-center  w-2/5">
+          <div className="flex items-center text-sm w-[40%]">
             <PlaceIcon className="text-2xl text-black" />
             <div className="ml-1">
               <div className="text-xs font-sans text-black">Delivery & Site Preferences</div>
-              <div className="text-xs font-sans text-black">address</div>
+              <div className="text-md font-sans text-black">address</div>
             </div>
           </div>
 
-          <div className="flex items-center text-sm">
+          <div className="flex items-center text-sm  w-[30%]">
             <PersonIcon className="text-2xl text-black" />
             <div className="ml-1">
               <div className="text-xs font-sans text-black">Hello, Sign In</div>
-              <div className="text-xs font-sans text-black">Accounts & Lists</div>
+              <div className="text-md font-sans text-black">Accounts & Lists</div>
             </div>
           </div>
 
-          <div className="w-[5%]">
-            <ShoppingCartIcon className="text-2xl text-black" />
+          <div className=" w-[20%]">
+            <ShoppingCartIcon className="text-4xl text-black" />
           </div>
         </div>
       </div>

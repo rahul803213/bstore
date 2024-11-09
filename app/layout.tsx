@@ -25,12 +25,12 @@ const Layout = ({ children }: Props) => {
         <NavBar />
 
         {/* Main Content */}
-        <main className=" flex  items-center">
+        <main className='flex justify-center' >
           {children}
         </main>
 
         {/* Footer (optional) */}
-        <Footer />
+         <Footer /> 
       </body>
     </html>
   );
