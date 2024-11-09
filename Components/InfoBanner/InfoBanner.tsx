@@ -3,12 +3,12 @@ import Image from 'next/image';
 import ShieldIcon from '@mui/icons-material/Shield';
 function InfoBanner() {
   return (
-    <div className='flex  w-full h-[12vh] mt-2 text-gray-600'>
-      <div className="w-1/4 flex flex-col justify-center items-center uppercase ">
+    <div className='grid grid-cols-4 w-full h-[12vh] text-gray-600'>
+      <div className="flex-1 flex flex-col justify-center items-center uppercase border-2 border-red-600">
         <p className='text-center'> door to door </p>
         <p className='text-center'> delivery </p>
       </div>
-      <div className="w-1/4  flex justify-center items-center ">
+      <div className="w-1/4 flex justify-center items-center ">
         <Image src="/mll.png" 
         alt="Banner Image"
           width={70} // Desired width
