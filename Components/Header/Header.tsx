@@ -12,11 +12,11 @@ const Header: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false); // To toggle the mobile menu
 
   return (
-    <header className="flex justify-between sm:justify-center items-center w-ful lg:w-[80%] px-4 py-2 bg-white ">
+    <header className="flex justify-between items-center w-full lg:w-10/12  lg:mx-auto bg-white h-20">
 
       {/* Mobile Hamburger Icon */}
       <div className="lg:hidden flex items-center">
-        <MenuIcon className="text-3xl text-black" onClick={() => setMenuOpen(!menuOpen)} />
+        <MenuIcon className="text-3xl text-black h-10" onClick={() => setMenuOpen(!menuOpen)} />
       </div>
 
       {/* Mobile Logo - Shows after Hamburger */}
@@ -25,7 +25,7 @@ const Header: React.FC = () => {
       </div>
 
       {/* Search Bar on Mobile and Desktop */}
-      <div className="w-full ml-2 lg:w-[45%] mt-2 lg:mt-0 flex justify-center lg:justify-start md:hidden">
+      <div className="flex-1 lg:w-[45%] flex justify-center lg:justify-start md:hidden border-2 border-red-500">
         <SearchBar />
       </div>
 
@@ -40,7 +40,10 @@ const Header: React.FC = () => {
         {/* Desktop Logo */}
         <div className="flex items-center space-x-4">
           <AutoStoriesIcon className="text-3xl text-black" />
-          <span className="font-sans text-black text-md leading-tight">HEALTH SCIENCES BOOKSTORE</span>
+          <p className="font-sans text-black text-md leading-tight flex flex-col">
+            <span>HEALTH SCIENCES</span> 
+            <span>BOOKSTORE</span>
+          </p>
         </div>
 
         {/* Search Bar */}

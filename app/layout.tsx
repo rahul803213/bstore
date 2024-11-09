@@ -3,6 +3,7 @@ import './globals.css'; // Import global styles
 import { ReactNode } from 'react';
 import Header from '@/Components/Header/Header';
 import NavBar from '@/Components/NavBar/NavBar';
+import Footer from '@/Components/Footer/Footer';
 
 type Props = {
   children: ReactNode;
@@ -16,7 +17,7 @@ const Layout = ({ children }: Props) => {
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
       </head>
       
-      <body className="bg-gray-50 flex flex-col min-h-screen">
+      <body className="bg-gray-50 min-h-screen">
         {/* Header */}
         <Header />
 
@@ -29,9 +30,7 @@ const Layout = ({ children }: Props) => {
         </main>
 
         {/* Footer (optional) */}
-        <footer className="w-full bg-gray-200 text-center p-4">
-          <p className="text-gray-700">&copy; {new Date().getFullYear()} Health Sciences Bookstore. All rights reserved.</p>
-        </footer>
+        <Footer />
       </body>
     </html>
   );
