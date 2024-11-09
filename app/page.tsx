@@ -1,5 +1,4 @@
 // app/page.tsx
-import NavBar from '@/Components/NavBar/NavBar';
 import React from 'react';
 import IconSection from '@/Components/IconSection/IconSection';
 const HomePage = () => {
