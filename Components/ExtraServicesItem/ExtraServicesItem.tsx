@@ -1,16 +1,16 @@
 import React from 'react';
 
 // Define the props for the component
-interface ServiceItemProps {
+interface ExtraServicesItemProps {
   title: string;
   imgSrc: string;
 }
 
-const ServiceItem: React.FC<ServiceItemProps> = ({ title, imgSrc }) => {
+const ExtraServicesItem: React.FC<ExtraServicesItemProps> = ({ title, imgSrc }) => {
   return (
-    <div className="w-[174px] h-[216px] flex flex-col items-center bg-gray-100 rounded-lg shadow-lg p-2">
+    <div className="w-[200px] h-[324px] flex flex-col items-center bg-gray-100 rounded-lg shadow-lg p-3">
       {/* Image Section */}
-      <div className="w-[174px] h-[180px] flex-shrink-0">
+      <div className="w-full h-[270px] flex-shrink-0">
         <img
           src={imgSrc}
           alt={title}
@@ -26,4 +26,4 @@ const ServiceItem: React.FC<ServiceItemProps> = ({ title, imgSrc }) => {
   );
 };
 
-export default ServiceItem;
+export default ExtraServicesItem;

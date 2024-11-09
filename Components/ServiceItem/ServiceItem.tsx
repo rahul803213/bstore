@@ -8,9 +8,9 @@ interface ServiceItemProps {
 
 const ServiceItem: React.FC<ServiceItemProps> = ({ title, imgSrc }) => {
   return (
-    <div className="w-[174px] h-[216px] flex flex-col items-center bg-gray-100 rounded-lg shadow-lg p-2">
+    <div className="w-[200px] h-[240px] flex flex-col items-center bg-gray-100 rounded-lg shadow-lg p-3">
       {/* Image Section */}
-      <div className="w-[174px] h-[180px] flex-shrink-0">
+      <div className="w-full h-[180px] flex-shrink-0">
         <img
           src={imgSrc}
           alt={title}
