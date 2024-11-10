@@ -11,7 +11,7 @@ interface ItemProps {
 
 const Item: React.FC<ItemProps> = ({ imgSrc, description, oldPrice, realPrice, rating }) => {
   return (
-    <div className="w-[120px] h-[248.58px] flex flex-col items-center bg-white rounded-lg shadow-lg p-2 border border-gray-200">
+    <div className="w-[120px] sm:w-[180px] h-[250px] sm:h-[320px] flex flex-col gap-2 bg-white rounded-lg shadow-lg p-2 border border-gray-200">
       {/* Image Section */}
       <div className="w-[120px] h-[150px] relative">
         <img

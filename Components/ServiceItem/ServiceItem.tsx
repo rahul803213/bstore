@@ -8,20 +8,22 @@ interface ServiceItemProps {
 
 const ServiceItem: React.FC<ServiceItemProps> = ({ title, imgSrc }) => {
   return (
-    <div className="w-[200px] h-[240px] flex flex-col items-center bg-gray-100 rounded-lg shadow-lg p-3">
+    <div className="w-full h-[240px] flex flex-col items-center rounded-lg p-2 gap-2">
       {/* Image Section */}
-      <div className="w-full h-[180px] flex-shrink-0">
+      <div className="flex-1">
         <img
           src={imgSrc}
           alt={title}
           className="w-full h-full rounded-lg object-cover"
+          loading='lazy'
         />
       </div>
 
       {/* Title Section */}
-      <div className="flex-grow flex items-center justify-center text-center mt-2">
-        <p className="text-sm font-semibold text-gray-700">{title}</p>
+      <div className="h-10 flex items-center justify-center">
+        <p className="text-xs md:text-sm font-semibold text-gray-700">{title}</p>
       </div>
+      
     </div>
   );
 };

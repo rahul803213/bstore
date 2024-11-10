@@ -11,8 +11,14 @@ const itemsData = Array.from({ length: 10 }, (_, i) => ({
 
 const Menu: React.FC = () => {
   return (
-    <div className="overflow-x-auto w-full py-4">
-      <div className="flex space-x-4 pl-2">
+    <div className="w-full py-2 border-2 border-green-500 overflow-x-auto">
+      <div>
+        <span className='font-semibold'>Recently Added</span> 
+        &nbsp; 
+        <a href='#' className='text-blue-500 underline'>see all</a>
+      </div>
+      
+      <div className="w-fit flex px-2 border-2 border-red-600 mt-2 gap-2">
         {itemsData.map((item, index) => (
           <Item
             key={index}
