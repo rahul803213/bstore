@@ -34,9 +34,9 @@ $gutter-horizontal: 6rem;
     &,
     &:link,
     &:visited {
-        text-transform: uppercase;
+        text-transform: capitalize;
         text-decoration: none;
-        padding: 1.5rem 4rem;
+        padding: 0.5rem 2rem;
         display: inline-block;
         border-radius: 10rem;
         transition: all .2s;
