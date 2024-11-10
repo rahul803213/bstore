@@ -60,7 +60,7 @@ const Footer: React.FC = () => {
         </section>
       </div>
 
-      <p className='align-center text-xs'>HSbookstore.com Copyright c  2024 All rights reserved</p>
+      <p className='text-center text-xs border'>HSbookstore.com Copyright c  2024 All rights reserved</p>
     </div>
   );
 };
