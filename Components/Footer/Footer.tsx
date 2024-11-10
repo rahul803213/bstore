@@ -3,7 +3,7 @@ import React from 'react';
 
 const Footer: React.FC = () => {
   return (
-    <div className="bg-blue-950 text-white px-3 py-6 text-sm">
+    <div className="bg-blue-950 text-white px-3 py-8 text-sm">
       <div className="flex flex-col sm:flex-row justify-around gap-2">
         {/* About Us Section */}
         <div >
@@ -60,7 +60,7 @@ const Footer: React.FC = () => {
         </section>
       </div>
 
-      <p className='text-center text-xs md:text-sm'>HSbookstore.com Copyright c  2024 All rights reserved</p>
+      <p className='text-center text-xs md:text-sm mt-4'>HSbookstore.com Copyright c  2024 All rights reserved</p>
     </div>
   );
 };
