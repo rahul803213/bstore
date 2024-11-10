@@ -3,7 +3,6 @@ import BookItem from '@/Components/BookItem/BookItem';
 import InfoBanner from '@/Components/InfoBanner/InfoBanner';
 import Banner from '@/Components/Banner/Banner';
 import Item from '@/Components/Items/Item';
-import Link from 'next/link';
 
 // BookList component to iterate and display the books
 const BookList: React.FC = () => {

@@ -1,7 +1,5 @@
 import React from 'react';
 import BookItem from '@/Components/BookItem/BookItem';
-import InfoBanner from '@/Components/InfoBanner/InfoBanner';
-import Banner from '@/Components/Banner/Banner';
 import Item from '@/Components/Items/Item';
 
 
