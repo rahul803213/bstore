@@ -10,7 +10,7 @@ const ServiceItem: React.FC<ServiceItemProps> = ({ title, imgSrc }) => {
   return (
     <div className="w-full h-[240px] flex flex-col items-center rounded-lg p-2 gap-2">
       {/* Image Section */}
-      <div className="flex-1">
+      <div className="flex-1 h-[150px] sm:h-[200px]">
         <img
           src={imgSrc}
           alt={title}

@@ -1,5 +1,6 @@
 // Footer.tsx
 import React from 'react';
+import { Facebook, WhatsApp, Twitter, Instagram, Pinterest, Github, Email } from '@/assets/muIcons';
 
 const Footer: React.FC = () => {
   return (
@@ -41,26 +42,26 @@ const Footer: React.FC = () => {
           <div>
             <h2 className="text-blue-300 font-semibold">Contact</h2>
             <div className="my-2 space-y-1">
-              <p>📱 +965 123 555 67</p>
-              <p>✉️ info@hsbookstore.com</p>
+              <p><WhatsApp />&nbsp; +965 123 555 67</p>
+              <p><Email />&nbsp; info@hsbookstore.com</p>
             </div>
           </div>
 
           {/* Follow Us Section */}
           <div>
             <h2 className="text-blue-300 font-semibold">Follow Us</h2>
-            <div className="flex items-center my-2 gap-1 h-8">
-              <a href="#" className="text-white hover:text-blue-300">🌐</a> {/* Icon for Facebook */}
-              <a href="#" className="text-white hover:text-blue-300">🌐</a> {/* Icon for Twitter */}
-              <a href="#" className="text-white hover:text-blue-300">🌐</a> {/* Icon for Instagram */}
-              <a href="#" className="text-white hover:text-blue-300">🌐</a> {/* Icon for Pinterest */}
-              <a href="#" className="text-white hover:text-blue-300">🌐</a> {/* Icon for Custom */}
+            <div className="flex items-center my-2 gap-2 h-8">
+              <a href="javascript:void(0);" className="text-white hover:text-blue-300"><Facebook /></a> {/* Icon for Facebook */}
+              <a href="javascript:void(0);" className="text-white hover:text-blue-300"><Twitter /></a> {/* Icon for Instagram */}
+              <a href="javascript:void(0);" className="text-white hover:text-blue-300"><Instagram /></a> {/* Icon for Twitter */}
+              <a href="javascript:void(0);" className="text-white hover:text-blue-300"><Pinterest /></a> {/* Icon for Pinterest */}
+              <a href="javascript:void(0);" className="text-white hover:text-blue-300"><Github /> </a> {/* Icon for Custom */}
             </div>
           </div>
         </section>
       </div>
 
-      <p className='text-center text-xs md:text-sm mt-4'>HSbookstore.com Copyright c  2024 All rights reserved</p>
+      <p className='text-center text-xs md:text-base mt-4'>HSbookstore.com Copyright c  2024 All rights reserved</p>
     </div>
   );
 };

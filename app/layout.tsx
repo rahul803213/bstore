@@ -21,7 +21,7 @@ const Layout = ({ children }: Props) => {
           <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
         </head>
         
-        <body className="bg-gray-50 min-h-screen">
+        <body className="bg-gray-50 min-h-dvh no-scrollbar ">
           <Header />
           <NavBar />
           <main className='flex justify-center'>

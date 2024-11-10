@@ -1,4 +1,5 @@
 
+import Link from 'next/link';
 import React from 'react';
 
 // Define the type for the book item
@@ -22,9 +23,9 @@ const dummyBooks: Book[] = [
 // BookItem component to render individual book details
 const BookItem: React.FC<{ book: Book }> = ({ book }) => {
   return (
-    <div className="flex flex-col items-center bg-gray-300" style={{ width: '112px', height: '150px' }}>
+    <Link href={'/books'} className="flex flex-col items-center bg-gray-300" style={{ width: '112px', height: '150px' }}>
       {/* Book Image */}
-      <div className="flex justify-center items-end" style={{ width: '112px', height: '116.51px' }}>
+      <div className="flex justify-center items-end" style={{ width: '112px', height: '116.51px' }} >
         <img
           src={book.imageUrl}
           alt={book.title}
@@ -39,7 +40,7 @@ const BookItem: React.FC<{ book: Book }> = ({ book }) => {
       >
         <span className="text-center text-sm text-white">{book.title}</span>
       </div>
-    </div>
+    </Link>
   );
 };
 

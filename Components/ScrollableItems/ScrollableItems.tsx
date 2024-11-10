@@ -46,7 +46,7 @@ const ScrollableServices: React.FC = () => {
       {/* First Scrollable Section */}
       <div>
         <h2 className="text-xl font-semibold text-gray-800 mb-4">Our Services</h2>
-        <div className="overflow-x-auto flex space-x-4 p-4 scrollbar-hide">
+        <div className="overflow-x-auto flex space-x-4 p-4 no-scrollbar">
           {servicesData.map((service, index) => (
             <ServiceItem key={index} title={service.title} imgSrc={service.imgSrc} />
           ))}
@@ -56,7 +56,7 @@ const ScrollableServices: React.FC = () => {
       {/* Second Scrollable Section */}
       <div>
         <h2 className="text-xl font-semibold text-gray-800 mb-4">Additional Services</h2>
-        <div className="overflow-x-auto flex space-x-4 p-4 scrollbar-hide">
+        <div className="overflow-x-auto flex space-x-4 p-4 no-scrollbar">
           {servicesData.map((service, index) => (
             <ServiceItem key={index} title={service.title} imgSrc={service.imgSrc} />
           ))}

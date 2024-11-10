@@ -3,10 +3,16 @@ import BookItem from '@/Components/BookItem/BookItem';
 import InfoBanner from '@/Components/InfoBanner/InfoBanner';
 import Banner from '@/Components/Banner/Banner';
 import Item from '@/Components/Items/Item';
-import Link from 'next/link';
 
+
+interface Props {
+  params: {
+    category: string;
+  };
+}
 // BookList component to iterate and display the books
-const BookList: React.FC = () => {
+const BookList = ({ params }: Props) => {
+  const { category } = params;
   interface Book {
     id: number;
     imgSrc: string;
@@ -15,6 +21,7 @@ const BookList: React.FC = () => {
     realPrice: string;
     rating: number;
   }
+ 
   
   const dummyBestsellers: Book[] = [
     { id: 1, imgSrc: 'https://via.placeholder.com/120x150', description: 'Book 1', oldPrice: '$25.99', realPrice: '$19.99', rating: 4 },
@@ -36,37 +43,47 @@ const BookList: React.FC = () => {
     { id: 4, title: 'Book 4', imageUrl: 'https://via.placeholder.com/91.4x97.2' },
     { id: 5, title: 'Book 5', imageUrl: 'https://via.placeholder.com/91.4x97.2' },
     { id: 6, title: 'Book 6', imageUrl: 'https://via.placeholder.com/91.4x97.2' },
-    { id: 7, title: 'Book 7', imageUrl: 'https://via.placeholder.com/91.4x97.2' },
+    
   ];
 
   return (
     <div className="p-4 w-full ">
       {/* Title and Info Banner */}
-      <InfoBanner />
-      
-      {/* Main Banner */}
-      <Banner
-        title="Neuroanatomy Books"
-        subTitle="A pioneering interactive approach to the teaching of neuroanatomy"
-        buttonText="Shop Now"
-        imgurl="./image.jpeg"
-      />
-    
+     
+     <h1 className='text-xl text-center uppercase font-bold font-sans'>{category}</h1>
       {/* Explore Medical Books Section */}
-      <h2 className="text-center text-2xl mb-6 text-gray-800">Explore Medical Books</h2>
+      <h2 className="text-center text-2xl mb-6 text-gray-800">Featured Category</h2>
       
       {/* Book Items */}
       <div className="w-full  grid grid-cols-3 sm:grid-cols-3 md:grid-cols-5 gap-4">
         {dummyBooks.map((book) => (
-<BookItem key={book.id} book={book} />
-          
-
+          <BookItem key={book.id} book={book} />
         ))}
       </div>
     
       {/* Bestsellers Section with Horizontal Scroll */}
       <div className="w-full  flex justify-between items-center mb-6">
         <h2 className="text-2xl text-gray-800">Bestsellers</h2>
+        <a href="#" className="text-blue-500 text-sm font-semibold">See All</a>
+      </div>
+      
+      {/* Horizontal Scrollable Row */}
+      <div className='w-full '>
+        <div className="flex overflow-x-auto gap-4 pb-4">
+          {dummyBestsellers.map((book) => (
+            <Item
+              key={book.id}
+              imgSrc={book.imgSrc}
+              description={book.description}
+              oldPrice={book.oldPrice}
+              realPrice={book.realPrice}
+              rating={book.rating}
+            />
+          ))}
+        </div>
+      </div>
+      <div className="w-full  flex justify-between items-center mb-6">
+        <h2 className="text-2xl text-gray-800">Recently Added</h2>
         <a href="#" className="text-blue-500 text-sm font-semibold">See All</a>
       </div>
       

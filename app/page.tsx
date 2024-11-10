@@ -15,7 +15,7 @@ const HomePage = () => {
   // Fetch schema data on mount
 
   return (
-    <div className='flex flex-col justify-center gap-2 w-full sm:w-[80%]'>
+    <div className='flex flex-col justify-center gap-2 w-full sm:w-[80%] '>
       <InfoBanner />
       <Banner
         title='neuroanatomy books'
@@ -25,7 +25,7 @@ const HomePage = () => {
       />
       <Services />
       <Menu />
-      <ExtraServices />
+      {/* <ExtraServices /> */}
       <ScrollableServices />
       <div>
         <h1>GraphQL Schema</h1>
