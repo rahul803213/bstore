@@ -3,7 +3,7 @@ import React from 'react';
 
 const Footer: React.FC = () => {
   return (
-    <div className="bg-blue-900 text-white px-3 py-6 text-sm">
+    <div className="bg-blue-950 text-white px-3 py-6 text-sm">
       <div className="flex flex-col sm:flex-row justify-around gap-2">
         {/* About Us Section */}
         <div >
@@ -49,7 +49,7 @@ const Footer: React.FC = () => {
           {/* Follow Us Section */}
           <div>
             <h2 className="text-blue-300 font-semibold">Follow Us</h2>
-            <div className="flex items-center my-2 gap-1 h-10">
+            <div className="flex items-center my-2 gap-1 h-8">
               <a href="#" className="text-white hover:text-blue-300">🌐</a> {/* Icon for Facebook */}
               <a href="#" className="text-white hover:text-blue-300">🌐</a> {/* Icon for Twitter */}
               <a href="#" className="text-white hover:text-blue-300">🌐</a> {/* Icon for Instagram */}
