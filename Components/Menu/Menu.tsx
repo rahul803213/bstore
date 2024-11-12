@@ -2,12 +2,12 @@ import React from 'react';
 import Item from '../Items/Item';
 import { LeftDirection, RightDirection } from '@/assets/muIcons';
 
-// Sample data for items
+// Sample data for items, using images from the public folder (m1.png to m6.png)
 const itemsData = Array.from({ length: 10 }, (_, i) => ({
-  imgSrc: `https://th.bing.com/th/id/OIP.wxSs26DdLqWNWtZQDLwPmgHaHa?w=186&h=186&c=7&r=0&o=5&dpr=1.5&pid=1.7`,
+  imgSrc: `/m${(i % 6) + 1}.png`,  // Using m1.png to m6.png in a loop
   description: `Item ${i + 1}`,
-  oldPrice: `$${(i + 1) * 10}`,
-  realPrice: `$${(i + 1) * 8}`,
+  oldPrice: `KWD ${(i + 1) * 10}`,
+  realPrice: `KWD ${(i + 1) * 8}`,
   rating: Math.floor(Math.random() * 5) + 1,
 }));
 

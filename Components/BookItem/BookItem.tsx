@@ -1,4 +1,5 @@
 
+"use client"
 import Link from 'next/link';
 import React from 'react';
 
@@ -23,7 +24,7 @@ const dummyBooks: Book[] = [
 // BookItem component to render individual book details
 const BookItem: React.FC<{ book: Book }> = ({ book }) => {
   return (
-    <Link href={'/books'} className="flex flex-col items-center bg-gray-300" style={{ width: '112px', height: '150px' }}>
+    <Link href='/books' className="flex flex-col items-center bg-gray-300" style={{ width: '112px', height: '150px' }}>
       {/* Book Image */}
       <div className="flex justify-center items-end" style={{ width: '112px', height: '116.51px' }} >
         <img

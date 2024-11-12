@@ -2,11 +2,11 @@ import React from 'react';
 import ServiceItem from '../ServiceItem/ServiceItem';
 // Example data for services with medical book images
 const servicesData = [
-  { title: 'Neuroanatomy Essentials', imgSrc: 'https://via.placeholder.com/200x300?text=Neuroanatomy+Essentials' },
-  { title: 'Medical Physiology', imgSrc: 'https://via.placeholder.com/200x300?text=Medical+Physiology' },
-  { title: 'Surgical Techniques', imgSrc: 'https://via.placeholder.com/200x300?text=Surgical+Techniques' },
-  { title: 'Pharmacology Handbook', imgSrc: 'https://via.placeholder.com/200x300?text=Pharmacology+Handbook' },
-  { title: 'Pathology Overview', imgSrc: 'https://via.placeholder.com/200x300?text=Pathology+Overview' },
+  { title: 'Neuroanatomy Essentials', imgSrc: '/1.png' },
+  { title: 'Medical Physiology', imgSrc: '/2.png' },
+  { title: 'Surgical Techniques', imgSrc: '/3.png' },
+  { title: 'Pharmacology Handbook', imgSrc: '/4.png' },
+  { title: 'Pathology Overview', imgSrc: '/5.png' },
 ];
 
 const Services: React.FC = () => {

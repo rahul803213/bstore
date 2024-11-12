@@ -1,5 +1,6 @@
 import React from 'react'
 import Button from '../Button/Button'
+import Image from 'next/image'
 
 // Define the props interface 
 interface BannerProps { 
@@ -12,14 +13,23 @@ interface BannerProps {
 const Banner: React.FC<BannerProps> = ({title, subTitle, buttonText, imgurl}) => {
 
   return (
-    <section className='w-full h-[619px] sm:h-[421px] p-2 flex flex-col gap-2 sm:flex-row'>
-      <div className='flex-1 uppercase flex flex-col justify-center items-center px-10 gap-3'>
-        <p className='text-gray-700  sm:text-2xl '>{title}</p>
-        <p className='font-semibold text-lg sm:text-4xl text-center'>{subTitle}</p>
+    <section className='w-full h-fit md:h-[421px] p-2 flex flex-col gap-2 md:flex-row bg-blue-50 '>
+      <div className='flex-1 uppercase flex flex-col justify-center items-center px-7 md:px-10 gap-3 max-md:py-5 '>
+        <p className='text-gray-500 text-sm xl:text-lg  '>{title}</p>
+        <p className='font-semibold text-lg md:text-2xl xl:text-3xl text-center leading-5'>{subTitle}</p>
         <Button text={buttonText} />
       </div>
-      <div className='flex-1'>
-        <img src={imgurl} alt='bannerImage' className='object-cover' />
+      <div className='flex-1 flex items-center'>
+        {/* <img src={imgurl} alt='bannerImage' className='object-cover' /> */}
+        <Image 
+          src="/Image.jpeg"
+          alt="bannerImage"
+          width={600} // Desired width
+          height={400} // Desired height
+          loading='lazy'
+          quality={100}
+          className='object-contain mix-blend-multiply'
+        />
       </div>
     </section>
   )

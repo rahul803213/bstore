@@ -9,7 +9,7 @@ function MedicalBooks() {
 
           {/* Replace with actual book data */}
           <Item
-            imgSrc="https://via.placeholder.com/150x200?text=Neuroanatomy+Essentials"
+            imgSrc="/1.png"
             description="Neuroanatomy Essentials"
             oldPrice="$120.00"
             realPrice="$85.00"

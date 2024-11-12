@@ -28,23 +28,23 @@ const ServiceItem: React.FC<ServiceItemProps> = ({ title, imgSrc }) => {
 
 // Example data for mini services (10 items)
 const servicesData = [
-  { title: 'Blood Test', imgSrc: '/path/to/image1.jpg' },
-  { title: 'X-Ray', imgSrc: '/path/to/image2.jpg' },
-  { title: 'ECG', imgSrc: '/path/to/image3.jpg' },
-  { title: 'Consultation', imgSrc: '/path/to/image4.jpg' },
-  { title: 'Vaccination', imgSrc: '/path/to/image5.jpg' },
-  { title: 'Therapy', imgSrc: '/path/to/image6.jpg' },
-  { title: 'MRI Scan', imgSrc: '/path/to/image7.jpg' },
-  { title: 'Surgery', imgSrc: '/path/to/image8.jpg' },
-  { title: 'Physiotherapy', imgSrc: '/path/to/image9.jpg' },
-  { title: 'Dental Checkup', imgSrc: '/path/to/image10.jpg' },
+  { title: 'Blood Test', imgSrc: '/1.png' },
+  { title: 'X-Ray', imgSrc: '/2.png' },
+  { title: 'ECG', imgSrc: '/3.png' },
+  { title: 'Consultation', imgSrc: '/4.png' },
+  { title: 'Vaccination', imgSrc: '/5.png' },
+  { title: 'Therapy', imgSrc: '/1.png' },
+  { title: 'MRI Scan', imgSrc: '/2.png' },
+  { title: 'Surgery', imgSrc: '/3.png' },
+  { title: 'Physiotherapy', imgSrc: '/4.png' },
+  { title: 'Dental Checkup', imgSrc: '/5.png' },
 ];
 
 const ScrollableServices: React.FC = () => {
   return (
-    <div className="space-y-6">
+    <div className="w-full space-y-6">
       {/* First Scrollable Section */}
-      <div>
+      <div >
         <h2 className="text-xl font-semibold text-gray-800 mb-4">Our Services</h2>
         <div className="overflow-x-auto flex space-x-4 p-4 no-scrollbar">
           {servicesData.map((service, index) => (

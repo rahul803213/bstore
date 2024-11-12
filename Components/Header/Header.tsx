@@ -2,12 +2,11 @@
 
 import React, { useState } from 'react';
 import SearchBar from '../SearchBar/SearchBar';
-import PlaceIcon from "@mui/icons-material/Place";
-import PersonIcon from '@mui/icons-material/Person';
+import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
+import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
 import AutoStoriesIcon from '@mui/icons-material/AutoStories';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import MenuIcon from '@mui/icons-material/Menu'; // Hamburger Icon
-
 
 const Header: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false); // To toggle the mobile menu
@@ -34,7 +33,7 @@ const Header: React.FC = () => {
       <div className=" lg:hidden flex items-center justify-end  space-x-4 ">
         {/* Cart Icon on Mobile */}
         {/* <Image src={shoppingBag} alt="Shopping Bag" width={50} height={50} /> */}
-        <ShoppingCartIcon className="text-4xl text-black"/>
+        <ShoppingCartOutlinedIcon className="text-4xl " style={{ color: 'var(--headertextcolor)' }}/>
         </div>
 
       {/* Desktop Layout */}
@@ -56,23 +55,23 @@ const Header: React.FC = () => {
         {/* Right Side Controls */}
         <div className="flex gap-4 items-center  justify-center  w-2/5">
           <div className="flex items-center text-sm w-[40%]">
-            <PlaceIcon className="text-2xl text-black" />
+            <LocationOnOutlinedIcon className="text-2xl " style={{ color: 'var(--headertextcolor)' }} />
             <div className="ml-1">
-              <div className="text-xs font-sans text-black">Delivery & Site Preferences</div>
-              <div className="text-md font-sans text-black">address</div>
+              <div className="text-xs font-sans "style={{ color: 'var(--headertextcolor)' }}>Delivery & Site Preferences</div>
+              <div className="text-md font-sans " style={{ color: 'var(--headertextcolor)' }}>address</div>
             </div>
           </div>
 
           <div className="flex items-center text-sm  w-[30%]">
-            <PersonIcon className="text-2xl text-black" />
+            <PersonOutlineOutlinedIcon className="text-2xl " style={{ color: 'var(--headertextcolor)' }}/>
             <div className="ml-1">
-              <div className="text-xs font-sans text-black">Hello, Sign In</div>
-              <div className="text-md font-sans text-black">Accounts & Lists</div>
+              <div className="text-xs font-sans " style={{ color: 'var(--headertextcolor)' }}>Hello, Sign In</div>
+              <div className="text-md font-sans " style={{ color: 'var(--headertextcolor)' }}>Accounts & Lists</div>
             </div>
           </div>
 
           <div className=" w-[20%]">
-            <ShoppingCartIcon className="text-4xl text-black" />
+            <ShoppingCartOutlinedIcon className="text-4xl " style={{ color: 'var(--headertextcolor)' }}/>
           </div>
         </div>
       </div>
@@ -80,7 +79,7 @@ const Header: React.FC = () => {
       {/* Mobile Menu */}
       <div className={`lg:hidden absolute top-0 left-0 w-full bg-white p-4 flex flex-col gap-4 ${menuOpen ? 'block' : 'hidden'}`}>
         <div className="flex items-center justify-between">
-          <PlaceIcon className="text-2xl text-black" />
+          <LocationOnOutlinedIcon className="text-2xl " style={{ color: 'var(--headertextcolor)' }} />
           <div>
             <div className="text-xs font-sans text-black">Delivery & Site Preferences</div>
             <div className="text-xs font-sans text-black">address</div>
@@ -88,7 +87,7 @@ const Header: React.FC = () => {
         </div>
 
         <div className="flex items-center justify-between">
-          <PersonIcon className="text-2xl text-black" />
+          <PersonOutlineOutlinedIcon className="text-2xl " style={{ color: 'var(--headertextcolor)' }} />
           <div>
             <div className="text-xs font-sans text-black">Hello, Sign In</div>
             <div className="text-xs font-sans text-black">Accounts & Lists</div>
@@ -96,7 +95,7 @@ const Header: React.FC = () => {
         </div>
 
         <div className="w-full flex justify-end">
-          <ShoppingCartIcon className="text-2xl text-black" />
+          <ShoppingCartOutlinedIcon className="text-2xl " style={{ color: 'var(--headertextcolor)' }} />
         </div>
       </div>
     </header>

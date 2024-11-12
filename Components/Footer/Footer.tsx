@@ -4,8 +4,8 @@ import { Facebook, WhatsApp, Twitter, Instagram, Pinterest, Github, Email } from
 
 const Footer: React.FC = () => {
   return (
-    <div className="bg-blue-950 text-white px-3 py-8 text-sm">
-      <div className="flex flex-col sm:flex-row justify-around gap-2">
+    <div className="bg-blue-950 text-white px-3 py-8 text-sm ">
+      <div className="w-full lg:w-[1024px] lg:mx-auto flex flex-col sm:flex-row justify-around gap-2 border-2 border-slate-200">
         {/* About Us Section */}
         <div >
           <h2 className="text-blue-300 font-semibold">About Us</h2>
