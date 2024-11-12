@@ -22,7 +22,7 @@ const Banner: React.FC<BannerProps> = ({title, subTitle, buttonText, imgurl}) =>
       <div className='flex-1 flex items-center'>
         {/* <img src={imgurl} alt='bannerImage' className='object-cover' /> */}
         <Image 
-          src="/Image.jpeg"
+          src="/image.jpeg"
           alt="bannerImage"
           width={600} // Desired width
           height={400} // Desired height
